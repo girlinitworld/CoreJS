@@ -5,9 +5,7 @@ function byTwo(numbers) {
 }
 
 const values = [1, 2, 3, 4, 5];
-console.log(
-  " - Task1. new array [1, 2, 3, 4, 5] multiply by2 = " + byTwo(values)
-);
+console.log(" - Task1. new array [1, 2, 3, 4, 5] multiply by2 = " + byTwo(values));
 
 //================================================================================================
 //2. Write a JavaScript function that takes an array as input and returns the length of the array.
@@ -16,21 +14,21 @@ function arrayLength(numbers) {
 }
 
 console.log(
-  ` - Task2. array [1, 2, 3, 4, 5] length custom function = ${arrayLength(
-    values
-  )} and predifined = ${values.length}`
+  ` - Task2. array [1, 2, 3, 4, 5] length custom function = ${arrayLength(values)} and predifined = ${
+    values.length
+  }`
 );
 
 //==========================================================================================================================================
 //3. Write a JavaScript function that takes an array of strings as input, sorts the strings in ascending order, and returns the sorted array.
 function sortArray(values) {
-  return values.sort();
+  return values.sort(function (a, b) {
+    return a.toLowerCase().localeCompare(b.toLowerCase());
+  });
 }
-const stringValues = ["ee", "aa", "kk", "bb", "cc", "dd", "cd"];
+const stringValues = ["Ee", "aa", "kk", "bb", "cc", "dd", "cd"];
 console.log(
-  ` - Task3. old =[${stringValues}] and new sorted asc string array = " ${sortArray(
-    stringValues
-  )}`
+  ` - Task3. old =[${stringValues}] and new sorted asc string array = [${sortArray(stringValues)}]`
 );
 
 //========================================================================================================================
@@ -43,17 +41,13 @@ function combineTwoArrays(array1, array2) {
 const array1 = [1, 10, "hello"];
 const array2 = [2, 6, "really"];
 const array3 = combineTwoArrays(array1, array2);
-console.log(
-  ` - Task4. combine two arrays = ${array3} and length is ${array3.length}`
-);
+console.log(` - Task4. combine two arrays = ${array3} and length is ${array3.length}`);
 
 //========================================================================================================================
 //5. Write a JavaScript function using an arrow function expression that takes two numbers as input and returns their sum.
 const sumOfTwo = (a, b) => a + b;
 
-console.log(
-  " - Task5. arrow function sum of two numbers 8 and 9 = " + sumOfTwo(8, 9)
-);
+console.log(" - Task5. arrow function sum of two numbers 8 and 9 = " + sumOfTwo(8, 9));
 
 //================================================================================================================================================================================
 //6. Write a JavaScript function that takes multiple arguments using the rest operator and returns the sum of all the arguments. If no arguments are provided, the function should return 0.
@@ -63,13 +57,8 @@ function sumOfArguments(...args) {
   } else return args.reduce((sum, current) => sum + current);
 }
 
-console.log(
-  " - Task6. sum of all elements (1, 1, 2, 2) = " + sumOfArguments(1, 1, 2, 2)
-);
-console.log(
-  " - Task6. sum of all elements and one more (1, 1, 2, 2, 7) = " +
-    sumOfArguments(1, 1, 2, 2, 7)
-);
+console.log(" - Task6. sum of all elements (1, 1, 2, 2) = " + sumOfArguments(1, 1, 2, 2));
+console.log(" - Task6. sum of all elements and one more (1, 1, 2, 2, 7) = " + sumOfArguments(1, 1, 2, 2, 7));
 console.log(" - Task6. sum of nothing = " + sumOfArguments());
 
 //===============================================================================================================================================================================
@@ -108,4 +97,4 @@ function recursionalFactorial(value) {
   if (value === 0 || value === 1) return 1;
   return value * recursionalFactorial(--value);
 }
-console.log("- Task9. Factorial of 5 = " + recursionalFactorial(5));
+console.log(" - Task9. Factorial of 5 = " + recursionalFactorial(5));
