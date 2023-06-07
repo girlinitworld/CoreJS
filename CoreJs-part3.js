@@ -54,7 +54,8 @@ console.log(" - Task5. arrow function sum of two numbers 8 and 9 = " + sumOfTwo(
 function sumOfArguments(...args) {
   if (args.length === 0) {
     return 0;
-  } else return args.reduce((sum, current) => sum + current);
+  }
+  return args.reduce((sum, current) => sum + current);
 }
 
 console.log(" - Task6. sum of all elements (1, 1, 2, 2) = " + sumOfArguments(1, 1, 2, 2));
