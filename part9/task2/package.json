@@ -4,7 +4,8 @@
   "description": "task2 for part9 of the course",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "webpack-dev-server"
   },
   "author": "ksana.ou"
 }
