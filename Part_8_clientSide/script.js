@@ -59,7 +59,7 @@ function highlightParagraphs() {
 //===================================================================================================================================================================
 // 8. Replace the text content of a paragraph with a new value when a button is clicked.
 function replaceParagraphText() {
-  let paragraphs = document.querySelectorAll("p.replaceText");
+  const paragraphs = document.querySelectorAll("p.replaceText");
   let newText = "Come to the Dark Side, we have cookies!";
   for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].textContent = newText;
