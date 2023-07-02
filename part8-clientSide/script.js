@@ -59,7 +59,7 @@ function highlightParagraphs() {
 //===================================================================================================================================================================
 // 8. Replace the text content of a paragraph with a new value when a button is clicked.
 function replaceParagraphText() {
-  let paragraphs = document.querySelectorAll("p#replaceText");
+  let paragraphs = document.querySelectorAll("p.replaceText");
   let newText = "Come to the Dark Side, we have cookies!";
   for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].textContent = newText;
@@ -76,7 +76,7 @@ function customizeElement() {
 //===================================================================================================================================================================
 // 10. Attach an event listener to a button that triggers an alert when clicked, and demonstrate event propagation by attaching another event listener to a parent element that triggers a different alert.
 function buttonAlert() {
-  alert("Button Clicked!");
+  alert("Child Button Clicked!");
 }
 
 function parentAlert() {
