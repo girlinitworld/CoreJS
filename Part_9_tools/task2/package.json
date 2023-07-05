@@ -1,0 +1,11 @@
+{
+  "name": "helloworld-task2-part9",
+  "version": "1.0.0",
+  "description": "task2 for part9 of the course",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "webpack-dev-server"
+  },
+  "author": "ksana.ou"
+}
