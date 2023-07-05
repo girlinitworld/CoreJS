@@ -2,12 +2,11 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    main: "./part9/script.js",
-    another: "./CoreJs-part1.js",
+    main: "./script.js",
   },
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "./part9/bundle/"),
+    path: path.resolve(__dirname, "./bundle/"),
   },
   mode: "development",
   module: {
