@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-async function fetchData(url: string): Promise<any> {
+async function fetchData<T>(url: string): Promise<T> {
   try {
     const response = await axios.get(url);
     return response.data;
@@ -13,10 +13,28 @@ async function fetchData(url: string): Promise<any> {
 }
 
 const apiUrl = "https://v2.jokeapi.dev/joke/Any?safe-mode";
-fetchData(apiUrl)
+fetchData<IJokeRes>(apiUrl)
   .then((data) => {
     console.log("Data fetched successfully:", data);
   })
   .catch((error) => {
     console.error("Error occurred while fetching data:", error);
   });
+
+interface IJokeRes {
+  error: boolean;
+  category: string;
+  type: string;
+  setup: string;
+  delivery: string;
+  flags: {
+    nsfw: boolean;
+    religious: boolean;
+    racist: boolean;
+    rexist: boolean;
+    explicit: boolean;
+  };
+  safe: boolean;
+  id: number;
+  lang: string;
+}

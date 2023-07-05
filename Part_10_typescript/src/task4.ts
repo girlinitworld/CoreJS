@@ -28,5 +28,5 @@ class ExampleClass {
 
 const example = new ExampleClass();
 
-console.log(example.calculateSum(5, 10));
-console.log(example.greet("John"));
+example.calculateSum(5, 10);
+example.greet("John");
